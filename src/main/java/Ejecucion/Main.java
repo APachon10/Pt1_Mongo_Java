@@ -75,8 +75,8 @@ public class Main {
 				break;
 			case 3:
 				int opcion4 = 0 ;
-				do {
-					System.out.println("En que Coleccion quieres hacer el Delete ? "
+					do {
+						System.out.println("En que Coleccion quieres hacer el Delete ? "
 							+ "\n 1 - Consolas"
 							+ "\n 2 - Juegos"
 							+ "\n 0 - Salir ");
