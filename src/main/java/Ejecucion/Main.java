@@ -52,13 +52,15 @@ public class Main {
 							+ "\n 2 - Juegos"
 							+ "\n 0 - Salir ");
 					System.out.println("=============================");
+					
 					System.out.print("Opcion:");
 					opcion2 = scan.nextInt();
 					switch (opcion2) {
 					case 1:
-						String db_name = "Consolas";
+						String db_name = "Tienda";
 						//	Nos conectamos a la base de Datos 
 						MongoDatabase db =  c.obtenerBasedeDatos(cliente,db_name);
+						
 						//	Creamos el Objeto Consola
 						Consolas c_new = new  Consolas();
 						System.out.print("Introduce el Nombre de la consola: ");

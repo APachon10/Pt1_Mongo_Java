@@ -11,6 +11,7 @@ import Modelos.Juegos;
 
 public class Comandos {
 	public void insertarConsolas(MongoDatabase db ,Consolas c,Document doc) {
+		System.out.println("Hola: "+db);
 		//Seleccionamos la coleccion
 		MongoCollection<Document> collection = db.getCollection("Consolas");	
 		collection.insertOne(doc);
