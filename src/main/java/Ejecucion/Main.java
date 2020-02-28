@@ -9,6 +9,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
 import Modelos.Consolas;
+import Modelos.Juegos;
 import Querys.Comandos;
 import Conexionm.Conexion;
 
@@ -73,8 +74,19 @@ public class Main {
 						c.cerrarConexion(cliente);
 						break;
 					case 2:
-						String db_name2 = "Juegos";
+						String db_name2 = "Tienda";
+//						Nos conectamos a la base de Datos 
 						MongoDatabase db2 =  c.obtenerBasedeDatos(cliente,db_name2);
+						
+//						Creamos el Objeto Consola
+						Juegos j_new = new  Juegos();
+						j_new.setPlataforma("PS5");
+						j_new.setPrecio(500.5);
+						//	Creamos el Documento con los datos 
+						Document doc = new Document("nombre", j_new.getNombre()).append("precio", j_new.getPrecio());
+						//	Insertamos 
+						c2.insertarConsolas(db ,c_new,doc);
+						c.cerrarConexion(cliente);
 						break;
 					}
 				} while (opcion2 !=0 );
